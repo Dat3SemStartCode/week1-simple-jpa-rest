@@ -4,6 +4,7 @@ import entities.RenameMe;
 import facades.FacadeExample;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
@@ -19,8 +20,8 @@ import javax.ws.rs.core.MediaType;
 @Path("rename_resource")
 public class RenameMeResource {
 
-    
-    FacadeExample facade = new FacadeExample();
+    EntityManagerFactory emf; 
+    FacadeExample facade =  FacadeExample.getFacadeExample(emf);
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
