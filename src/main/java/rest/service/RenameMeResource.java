@@ -3,7 +3,6 @@ package rest.service;
 import entities.RenameMe;
 import facades.FacadeExample;
 import java.util.List;
-import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.ws.rs.Consumes;
@@ -21,7 +20,7 @@ import javax.ws.rs.core.MediaType;
 public class RenameMeResource {
 
     
-    FacadeExample cf = new FacadeExample();
+    FacadeExample facade = new FacadeExample();
 
     @GET
     @Produces({MediaType.APPLICATION_JSON})
