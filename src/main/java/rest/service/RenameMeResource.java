@@ -19,8 +19,9 @@ import javax.ws.rs.core.MediaType;
 
 @Path("rename_resource")
 public class RenameMeResource {
-
-    EntityManagerFactory emf; 
+    
+    //NOTE: Change Persistence unit name according to your setup
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu"); 
     FacadeExample facade =  FacadeExample.getFacadeExample(emf);
 
     @GET
