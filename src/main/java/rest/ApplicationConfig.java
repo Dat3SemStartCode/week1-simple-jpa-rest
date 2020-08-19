@@ -1,4 +1,4 @@
-package rest.service;
+package rest;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -21,7 +21,7 @@ public class ApplicationConfig extends Application {
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(org.glassfish.jersey.server.wadl.internal.WadlResource.class);
-        resources.add(rest.service.RenameMeResource.class);
+        resources.add(rest.RenameMeResource.class);
     }
     
 }
